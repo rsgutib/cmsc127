@@ -1,0 +1,47 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+button {
+  margin: 10px 0px;
+  text-align: center;
+}
+
+h1 {
+  margin: 10px 0px;
+}
+
+fieldset {
+  margin: 5px 250px;
+}
+
+table, td {
+  border: 5px solid black;
+}
+
+h3 {
+  text-align: center;
+}
+
+img {
+  width: auto;
+  max-height: 500px;
+}
+
+.about {
+  text-align: center;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.apply {
+  margin: 0px 150px;
+}
+
+.applicant {
+  margin: 0px 200px;
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="apply">
+      <form class="" action="apply.php" method="post">
+          <p> CS Form No. 212 <br> Revised 2017 </p>
+          <h3>PERSONAL DATA SHEET</h3>
+          <p>
+            WARNING: Any misrepresentation made in the Personal Data Sheet
+            and the Work Experience Sheet shall cause the filing administrative
+            /criminal case/s against the person concerned. <br> <br>
+            READ THE ATTACHED GUIDE TO FILLING OUT THE PERSONAL DATA SHEET (PDS)
+            BEFORE ACCOMPLISHING THE PDS FORM. <br>
+            Print legibly. Tick appropriate boxes (□) and use separate sheet if
+            necessary. Indicate N/A if not applicable. DO NOT ABB
+          </p>
+          <p>1. CS ID No. <input type="text" name="csid" value="">
+            (Do not fill up. For CSC use only)</p>
+          <h4>I. PERSONAL INFORMATION</h4>
+          <p>
+            2. SURNAME
+            <input type="text" name="surname" value=""> <br>
+            FIRST NAME
+            <input type="text" name="firstname" value=""> <br>
+            MIDDLE NAME
+            <input type="text" name="midname" value=""> <br>
+            NAME EXTENSION (JR., SR.)
+            <input type="text" name="extraname" value="">
+          </p>
+          <p>
+            3. DATE OF BIRTH
+            <input type="date" name="birthdate" value="">
+          </p>
+          <p>
+            4. PLACE OF BIRTH
+            <input type="text" name="birthplace" value="">
+          </p>
+          <p>
+            5. SEX
+            <input type="radio" name="gender" value="Male" checked="checked"> Male
+            <input type="radio" name="gender" value="Female"> Female
+          </p>
+          <p>
+            6. CIVIL STATUS
+            <input type="radio" name="civilstatus" value="Single" checked="checked"
+              onclick="disable()"> Single
+            <input type="radio" name="civilstatus" value="Married"
+              onclick="disable()"> Married
+            <input type="radio" name="civilstatus" value="Widowed"
+              onclick="disable()"> Widowed
+            <input type="radio" name="civilstatus" value="Separated"
+              onclick="disable()"> Separated
+            <input type="radio" name="civilstatus" value="Others"
+              onclick="enable()"> Other/s:
+            <input type="text" name="civilstatusOther" value=""
+              id="otherText">
+          </p>
+          <p>
+            7. HEIGHT (m)
+            <input type="number" oninput"setTwoNumberDecimal(this)" name="height" min="0" value="0.00" step="0.01">
+          </p>
+          <p>
+            8. WEIGHT (kg)
+            <input type="number" oninput="setTwoNumberDecimal(this)" name="weight" min="0" value="0.00" step="0.01">
+          </p>
+          <p>
+            9. BLOOD TYPE
+            <select class="" name="bloodtype">
+              <option value="A-">A-</option>
+              <option value="A+">A+</option>
+              <option value="B-">B-</option>
+              <option value="B+">B+</option>
+              <option value="AB-">AB-</option>
+              <option value="AB+">AB+</option>
+              <option value="O-">O-</option>
+              <option value="O+">O+</option>
+            </select>
+          </p>
+          <p>
+            10. GSIS ID NO.
+            <input type="text" name="gsisid" value="">
+          </p>
+          <p>
+            11. PAG-IBIG FUND NO.
+            <input type="text" name="pagibigid" value="">
+          </p>
+          <p>
+            12. PHILHEALTH NO.
+            <input type="text" name="philhealthid" value="">
+          </p>
+          <p>
+            13. SSS NO.
+            <input type="text" name="sssid" value="">
+          </p>
+          <p>
+            14. TIN NO.
+            <input type="text" name="tinid" value="">
+          </p>
+          <p>
+            15. AGENCY EMPLOYEE NO.
+            <input type="text" name="aeid" value="">
+          </p>
+          <p>
+            16. CITIZENSHIP STATUS
+            <input type="radio" name="citizenship" value="Filipino" checked="checked"
+              onclick="deactivate()"> Filipino
+            <input type="radio" name="citizenship" value="Dual"
+              onclick="activate()"> Dual Citizenship
+            <input type="radio" name="dualmean" value="by Birth"
+              id="birth"> by birth
+            <input type="radio" name="dualmean" value="Naturalized"
+              id="natural"> by naturalization
+            <select class="" name="dualchoice" id="nationality">
+              <option value="USA">US</option>
+              <option value="UK">UK</option>
+              <option value="Germany">German</option>
+            </select>
+            <br>
+            If holder of dual citizenship, please indicate the details
+          </p>
+          <p>
+            17. RESIDENTIAL ADDRESS <br>
+            <input type="text" name="houseres" value=""> House/Block/Lot No. <br>
+            <input type="text" name="stres" value=""> Street <br>
+            <input type="text" name="subdres" value=""> Subdivision/Village <br>
+            <input type="text" name="barangayres" value=""> Barangay <br>
+            <input type="text" name="cityres" value=""> City/Municipality <br>
+            <input type="text" name="provinceres" value=""> Province <br>
+            ZIP CODE
+            <input type="text" name="zipres" value="">
+          </p>
+          <p>
+            18. PERMANENT ADDRESS <br>
+            <input type="text" name="houseperm" value=""> House/Block/Lot No. <br>
+            <input type="text" name="stperm" value=""> Street <br>
+            <input type="text" name="subdperm" value=""> Subdivision/Village <br>
+            <input type="text" name="barangayperm" value=""> Barangay <br>
+            <input type="text" name="cityperm" value=""> City/Municipality <br>
+            <input type="text" name="provinceperm" value=""> Province <br>
+            ZIP CODE
+            <input type="text" name="zipperm" value="">
+          </p>
+          <p>
+            19. TELEPHONE NO.
+            <input type="tel" name="telno" value="">
+          </p>
+          <p>
+            20. MOBILE NO.
+            <input type="tel" name="celno" value="">
+          </p>
+          <p>
+            21. E-MAIL ADDRESS (if any)
+            <input type="text" name="email" value="">
+          </p>
+          <h4>II. FAMILY BACKGROUND</h4>
+          <p>
+            22. SPOUSE'S SURNAME
+            <input type="text" name="surspouse" value=""> <br>
+            FIRST NAME
+            <input type="text" name="firstspouse" value=""> <br>
+            MIDDLE NAME
+            <input type="text" name="midspouse" value=""> <br>
+            NAME EXTENSION (JR., SR.)
+            <input type="text" name="extraspouse" value=""> <br>
+            OCCUPATION
+            <input type="text" name="occspouse" value=""> <br>
+            EMPLOYER/BUSINESS NAME
+            <input type="text" name="employer" value=""> <br>
+            BUSINESS ADDRESS
+            <input type="text" name="busaddress" value=""> <br>
+            TELEPHONE NO.
+            <input type="tel" name="bustelno" value="">
+          </p>
+          <p>
+            23. NAME of CHILDREN (Write full name and list all)
+            <table>
+              <tr>
+                <td>Name</td>
+                <td>Date of Birth <br> (mm/dd/yyyy)</td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children1" value=""></td>
+                <td><input type="date" name="birth1" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children2" value=""></td>
+                <td><input type="date" name="birth2" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children3" value=""></td>
+                <td><input type="date" name="birth3" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children4" value=""></td>
+                <td><input type="date" name="birth4" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children5" value=""></td>
+                <td><input type="date" name="birth5" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children6" value=""></td>
+                <td><input type="date" name="birth6" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children7" value=""></td>
+                <td><input type="date" name="birth7" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children8" value=""></td>
+                <td><input type="date" name="birth8" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children9" value=""></td>
+                <td><input type="date" name="birth9" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children10" value=""></td>
+                <td><input type="date" name="birth10" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children11" value=""></td>
+                <td><input type="date" name="birth11" value=""></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="children12" value=""></td>
+                <td><input type="date" name="birth12" value=""></td>
+              </tr>
+            </table>
+            <p>(Continue on separate sheet if necessary)</p>
+          </p>
+          <p>
+            24. FATHER'S SURNAME
+            <input type="text" name="surdad" value=""> <br>
+            FIRST NAME
+            <input type="text" name="firstdad" value=""> <br>
+            MIDDLE NAME
+            <input type="text" name="middad" value=""> <br>
+            NAME EXTENSION (JR., SR.)
+            <input type="text" name="extradad" value=""> <br>
+          </p>
+          <p>
+            25. MOTHER'S MAIDEN NAME
+            <input type="text" name="maidenmom" value=""> <br>
+            SURNAME
+            <input type="text" name="surmom" value=""> <br>
+            FIRST NAME
+            <input type="text" name="firstmom" value=""> <br>
+            MIDDLE NAME
+            <input type="text" name="midmom" value=""> <br>
+            NAME EXTENSION (JR., SR.)
+            <input type="text" name="extramom" value=""> <br>
+          </p>
+          <h4>III. EDUCATIONAL BACKGROUND</h4>
+    </div>
+    <table>
+      <tr>
+        <td rowspan="2">26. LEVEL</td>
+        <td rowspan="2">NAME OF SCHOOL <br> (Write in full)</td>
+        <td rowspan="2">BASIC EDUCATION/DEGREE/COURSE</td>
+        <td colspan="2">PERIOD OF ATTENDANCE</td>
+        <td rowspan="2">HIGHEST LEVEL/UNITS EARNED <br> (if not graduated)</td>
+        <td rowspan="2">YEAR GRADUATED</td>
+        <td rowspan="2">SCHOLARSHIP/ACADEMIC HONORS RECEIVED</td>
+      </tr>
+      <tr>
+        <td>From</td>
+        <td>To</td>
+      </tr>
+      <tr>
+        <td>Elementary</td>
+        <td><input type="text" name="elemname" value=""></td>
+        <td><input type="text" name="elembasic" value=""></td>
+        <td><input type="date" name="elemfrom" value=""></td>
+        <td><input type="date" name="elemto" value=""></td>
+        <td><input type="text" name="elemhighest" value=""></td>
+        <td><input type="text" name="elemgrad" value=""></td>
+        <td><input type="text" name="elemaward" value=""></td>
+      </tr>
+      <tr>
+        <td>Secondary</td>
+        <td><input type="text" name="secname" value=""></td>
+        <td><input type="text" name="secbasic" value=""></td>
+        <td><input type="date" name="secfrom" value=""></td>
+        <td><input type="date" name="secto" value=""></td>
+        <td><input type="text" name="sechighest" value=""></td>
+        <td><input type="text" name="secgrad" value=""></td>
+        <td><input type="text" name="secaward" value=""></td>
+        </tr>
+      <tr>
+        <td>Vocational/Trade Course</td>
+        <td><input type="text" name="vocname" value=""></td>
+        <td><input type="text" name="vocbasic" value=""></td>
+        <td><input type="date" name="vocfrom" value=""></td>
+        <td><input type="date" name="vocto" value=""></td>
+        <td><input type="text" name="vochighest" value=""></td>
+        <td><input type="text" name="vocgrad" value=""></td>
+        <td><input type="text" name="vocaward" value=""></td>
+      </tr>
+      <tr>
+        <td>College</td>
+        <td><input type="text" name="colname" value=""></td>
+        <td><input type="text" name="colbasic" value=""></td>
+        <td><input type="date" name="colfrom" value=""></td>
+        <td><input type="date" name="colto" value=""></td>
+        <td><input type="text" name="colhighest" value=""></td>
+        <td><input type="text" name="colgrad" value=""></td>
+        <td><input type="text" name="colaward" value=""></td>
+      </tr>
+      <tr>
+        <td>Graduate Studies</td>
+          <td><input type="text" name="gradname" value=""></td>
+          <td><input type="text" name="gradbasic" value=""></td>
+          <td><input type="date" name="gradfrom" value=""></td>
+          <td><input type="date" name="gradto" value=""></td>
+          <td><input type="text" name="gradhighest" value=""></td>
+          <td><input type="text" name="gradgrad" value=""></td>
+          <td><input type="text" name="gradaward" value=""></td>
+        </tr>
+      </table>
+
+      <div class="apply">
+          <p>(Continue on separate sheet if necessary)</p>
+          <p>
+            SIGNATURE
+            <input type="text" name="sig" value="">
+          </p>
+          <p>
+            DATE
+            <input type="date" name="date3" value="">
+          </p>
+        <button type="submit" name="apply">Apply</button>
+        &nbsp;
+        <button type="button" onclick="location.href = 'home.html'">Back</button>
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      function setTwoNumberDecimal() {
+        this.value = parseFloat(this.value).toFixed(2);
+      }
+      // directly taken from: https://stackoverflow.com/questions/14862009/make-an-html-number-input-always-display-2-decimal-places
+
+      document.getElementById("birth").disabled = true;
+      document.getElementById("natural").disabled = true;
+      document.getElementById("nationality").disabled = true;
+      document.getElementById("otherText").disabled = true;
+      function activate()
+      {
+        document.getElementById("birth").disabled = false;
+        document.getElementById("natural").disabled = false;
+        document.getElementById("nationality").disabled = false;
+      }
+      function deactivate()
+      {
+        document.getElementById("birth").disabled = true;
+        document.getElementById("natural").disabled = true;
+        document.getElementById("nationality").disabled = true;
+      }
+      function enable()
+      {
+        document.getElementById("otherText").disabled = false;
+      }
+      function disable()
+      {
+        document.getElementById("otherText").disabled = true;
+      }
+    </script>
+  </body>
+</html>
