@@ -7,30 +7,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <?php
-
-    ?>
-    <!-- <script type="text/javascript">
-      var logged = false;
-      function login() {
-        var user = prompt("Please enter username.");
-        if (user != "user")
-        {
-          alert("Wrong username! Redirecting...");
-          location.href = 'home.html';
-        }
-        var pass = prompt("Please enter password.");
-        if (pass != "pass")
-        {
-          alert("Wrong password! Redirecting...");
-          location.href = 'home.html';
-        }
-        logged = true;
-      }
-    </script> -->
-    <script type="text/javascript">
-
-    </script>
     <div class="apply">
       <div class="aligncenter">
         <h2>Applicants</h2>
